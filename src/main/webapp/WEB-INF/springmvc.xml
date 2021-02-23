@@ -5,4 +5,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
    <!--扫描所有组件-->
     <context:component-scan base-package="HMX.bean"></context:component-scan>
+    <!--视图解析器,可以简化方法的返回值,返回值是作为目标页面地址,只不过视图解析器可以
+    帮我们拼串-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
 </beans>

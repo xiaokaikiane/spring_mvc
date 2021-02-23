@@ -21,6 +21,19 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
 
+  <!--/  拦截所有请求除开 jsp文件
+      /*  拦截所有请求
+      jsp文件是交给tomcat处理的
+      所有项目的web.xml都是继承自服务器的web.xml
+      DefaultServlet是tomcat中处理静态资源的
+      除了jsp和Servlet都是属于静态资源
+      我们自己的前端控制器的/就禁用了tomcat服务器中的DefaultServlet
+      静态资源回来到DispatcherServlet(前端控制器) 看哪个方法的RequestMapping是对应的html(例子),
+      结果没有,自然访问不了html
+      在服务器中还有jspServlet,所以jsp自然不会被 / 拦截.
+      1).服务器中的web.xml中有一个DefaultServlet是 url-pattern=/
+      2).我们自己的web.xml中也为 url-pattern=/
+      -->
   <servlet-mapping>
     <servlet-name>dispatcherServlet</servlet-name>
     <url-pattern>/</url-pattern>

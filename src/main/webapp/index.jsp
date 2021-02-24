@@ -14,5 +14,13 @@
 <h1>requestMapping--Ant风格的URL</h1>
 <a href="/antTest01">精确请求地址-antTest01</a>
 <a href="/user/admin">测试PathVariable</a>
+<h1>RequestParam测试</h1>
+<a href="/handle03">handle03</a>
+<a href="/handle04">handle04</a>
+<h1>数据数据输出:如何将数据输出给页面</h1>
+<a href="world">world</a><br/>
+<a href="/world01">world01</a><br/>
+<a href="/world02">world02</a><br/>
+<a href="/world03">world03</a><br/>
 </body>
 </html>
